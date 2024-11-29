@@ -30,6 +30,10 @@ main {
   font-weight: 500;
 }
 
+.add-ingredient-form > button:hover {
+  cursor: pointer;
+}
+
 .add-ingredient-form > button::before {
   content: "+";
   margin-right: 5px;

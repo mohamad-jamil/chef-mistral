@@ -8,15 +8,25 @@ export default function Main() {
   const [ingredients, setIngredients] = useState<string[]>([]);
   const [recipe, setRecipe] = useState<string>("");
 
-  function addIngredient(formData: FormData) {
+  const addIngredient = (formData: FormData) => {
     const newIngredient = formData.get("ingredient");
     if (typeof newIngredient === "string") {
       setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
     }
-  }
+  };
+
+  const handleDeleteIngredient = (index: number) => {
+    console.log(ingredients);
+    setIngredients((prevIngredients) => {
+      return prevIngredients
+        .slice(0, index)
+        .concat(prevIngredients.slice(index + 1, prevIngredients.length));
+    });
+  };
 
   async function getRecipe() {
     const result = await getRecipeFromMistral(ingredients);
+    console.log(result);
     if (result !== undefined) {
       setRecipe(result);
     } else {
@@ -31,7 +41,11 @@ export default function Main() {
         <button>Add ingredient</button>
       </form>
       {ingredients.length > 0 && (
-        <IngredientsList getRecipe={getRecipe} ingredients={ingredients} />
+        <IngredientsList
+          getRecipe={getRecipe}
+          ingredients={ingredients}
+          handleDeleteIngredient={handleDeleteIngredient}
+        />
       )}
       {recipe && <MistralRecipe recipe={recipe} />}
     </main>

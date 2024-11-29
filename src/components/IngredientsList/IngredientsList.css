@@ -1,0 +1,38 @@
+.ingredients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.ingredient {
+    background-color: #c2bebe;
+    width: 500px;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-button {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-family: Inter, sans-serif;
+    background-color: #141413;
+    color: #fafaf8;
+    width: 80px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+}

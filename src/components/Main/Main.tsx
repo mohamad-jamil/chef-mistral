@@ -8,7 +8,9 @@ export default function Main() {
   const [ingredients, setIngredients] = useState<string[]>([]);
   const [recipe, setRecipe] = useState<string>("");
 
-  const addIngredient = (formData: FormData) => {
+  const addIngredient = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
     const newIngredient = formData.get("ingredient");
     if (typeof newIngredient === "string") {
       setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
@@ -36,7 +38,7 @@ export default function Main() {
 
   return (
     <main>
-      <form action={addIngredient} className="add-ingredient-form">
+      <form onSubmit={addIngredient} className="add-ingredient-form">
         <input type="text" placeholder="e.g. oregano" name="ingredient" />
         <button>Add ingredient</button>
       </form>

@@ -26,8 +26,7 @@ export default function IngredientsList({
                     className="delete-button"
                     onClick={() => handleDeleteIngredient(index)}
                   >
-                    Delete
-                    {/* <img src="delete-icon.png" alt="delete icon" width="20px" /> */}
+                    <img src="delete-icon.png" alt="delete icon" width="20px" />
                   </div>
                 </li>
               );

@@ -42,13 +42,13 @@ export default function Main() {
         <input type="text" placeholder="e.g. oregano" name="ingredient" />
         <button>Add ingredient</button>
       </form>
-      {ingredients.length > 0 && (
-        <IngredientsList
-          getRecipe={getRecipe}
-          ingredients={ingredients}
-          handleDeleteIngredient={handleDeleteIngredient}
-        />
-      )}
+
+      <IngredientsList
+        getRecipe={getRecipe}
+        ingredients={ingredients}
+        handleDeleteIngredient={handleDeleteIngredient}
+      />
+
       {recipe && <MistralRecipe recipe={recipe} />}
     </main>
   );

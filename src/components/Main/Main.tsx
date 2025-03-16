@@ -20,7 +20,6 @@ export default function Main() {
   };
 
   const handleDeleteIngredient = (index: number) => {
-    console.log(ingredients);
     setIngredients((prevIngredients) => {
       return prevIngredients
         .slice(0, index)
@@ -30,7 +29,6 @@ export default function Main() {
 
   async function getRecipe() {
     const result = await getRecipeFromMistral(ingredients);
-    console.log(result);
     if (result !== undefined) {
       setRecipe(result);
     } else {

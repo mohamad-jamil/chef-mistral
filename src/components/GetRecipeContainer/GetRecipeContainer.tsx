@@ -4,8 +4,6 @@ interface Props {
 }
 
 export default function GetRecipeContainer({ getRecipe, ingredients }: Props) {
-  console.log(`Ingredients: ${ingredients}, length: ${ingredients.length}`);
-
   return (
     <div className="get-recipe-container">
       {ingredients && ingredients.length >= 3 ? (

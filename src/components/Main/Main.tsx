@@ -15,6 +15,8 @@ export default function Main() {
     if (typeof newIngredient === "string") {
       setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
     }
+
+    event.currentTarget.reset();
   };
 
   const handleDeleteIngredient = (index: number) => {

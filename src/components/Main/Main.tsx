@@ -39,7 +39,7 @@ export default function Main() {
   }
 
   return (
-    <main className="p-[30px] pt-[30px] pb-[10px] mx-auto my-[20px] md:bg-[#f1f1f1] md:rounded-xl md:w-4/5 xl:w-5xl">
+    <main className="p-[30px] pt-[30px] pb-[30px] mx-auto my-[20px] md:bg-[#f1f1f1] md:rounded-xl md:w-4/5 xl:w-5xl">
       <form
         onSubmit={addIngredient}
         className="add-ingredient-form flex justify-center gap-4 h-[38px]"

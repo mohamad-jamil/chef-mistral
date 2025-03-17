@@ -39,7 +39,7 @@ export default function Main() {
   }
 
   return (
-    <main className="p-[30px] pt-[30px] pb-[10px]">
+    <main className="p-[30px] pt-[30px] pb-[10px] mx-auto my-[20px] md:bg-[#f1f1f1] md:rounded-xl md:w-4/5 xl:w-5xl">
       <form
         onSubmit={addIngredient}
         className="add-ingredient-form flex justify-center gap-4 h-[38px]"
@@ -51,7 +51,7 @@ export default function Main() {
           name="ingredient"
         />
         <button className="font-sans rounded-md border-none bg-[#141413] text-[#fafaf8] w-[150px] text-sm font-medium px-4 py-2 hover:cursor-pointer">
-          + Add <span className="hidden md:inline">ingredient</span>
+          + Add <span className="hidden sm:inline">ingredient</span>
         </button>
       </form>
 

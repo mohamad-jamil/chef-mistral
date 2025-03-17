@@ -50,8 +50,8 @@ export default function Main() {
           placeholder="e.g. oregano"
           name="ingredient"
         />
-        <button className="font-sans rounded-md border-none bg-[#141413] text-[#fafaf8] w-[150px] text-sm font-medium px-4 py-2 flex items-center justify-center hover:cursor-pointer">
-          + Add ingredient
+        <button className="font-sans rounded-md border-none bg-[#141413] text-[#fafaf8] w-[150px] text-sm font-medium px-4 py-2 hover:cursor-pointer">
+          + Add <span className="hidden md:inline">ingredient</span>
         </button>
       </form>
 

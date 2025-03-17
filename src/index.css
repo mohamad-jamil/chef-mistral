@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-.suggested-recipe-container ul li,
-.suggested-recipe-container ol li {
-  margin-bottom: 8px;
+.suggested-recipe-container p {
+  margin-top: 20px;
 }

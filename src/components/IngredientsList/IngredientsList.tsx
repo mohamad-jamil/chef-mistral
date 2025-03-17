@@ -15,13 +15,15 @@ export default function IngredientsList({
     <section>
       {ingredients.length > 0 && (
         <>
-          <h2>Ingredients on hand:</h2>
+          <h2 className="text-xl text-center font-semibold pt-[20px] pb-[10px]">
+            Ingredients
+          </h2>
           <ul className="ingredients-list flex flex-col gap-[10px] items-center">
             {ingredients.map((ingredient, index) => {
               return (
                 <li
                   key={index}
-                  className="ingredient bg-[#c2bebe] w-[500px] list-none py-[10px] pl-[15px] rounded-lg flex justify-between items-center"
+                  className="ingredient bg-[#d3d3d3] w-full list-none py-[10px] pl-[15px] rounded-lg flex justify-between items-center"
                 >
                   {ingredient}
                   <div

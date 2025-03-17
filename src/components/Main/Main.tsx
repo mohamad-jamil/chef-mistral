@@ -1,4 +1,3 @@
-import "./Main.css";
 import { useState } from "react";
 import MistralRecipe from "../MistralRecipe/MistralRecipe";
 import IngredientsList from "../IngredientsList/IngredientsList";
@@ -37,10 +36,20 @@ export default function Main() {
   }
 
   return (
-    <main>
-      <form onSubmit={addIngredient} className="add-ingredient-form">
-        <input type="text" placeholder="e.g. oregano" name="ingredient" />
-        <button>Add ingredient</button>
+    <main className="p-[30px] pt-[30px] pb-[10px]">
+      <form
+        onSubmit={addIngredient}
+        className="add-ingredient-form flex justify-center gap-4 h-[38px]"
+      >
+        <input
+          className="flex-grow min-w-[150px] max-w-[400px] rounded-md border border-gray-300 p-[9px] px-[13px] shadow-sm"
+          type="text"
+          placeholder="e.g. oregano"
+          name="ingredient"
+        />
+        <button className="font-sans rounded-md border-none bg-[#141413] text-[#fafaf8] w-[150px] text-sm font-medium px-4 py-2 flex items-center justify-center hover:cursor-pointer">
+          Add ingredient
+        </button>
       </form>
 
       <IngredientsList

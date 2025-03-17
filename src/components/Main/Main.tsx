@@ -30,6 +30,7 @@ export default function Main() {
   };
 
   async function getRecipe() {
+    setRecipe("Loading recipe...");
     const result = await getRecipeFromMistral(ingredients);
     if (result !== undefined) {
       setRecipe(result);

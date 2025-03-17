@@ -11,8 +11,11 @@ export default function Main() {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const newIngredient = formData.get("ingredient");
-    if (typeof newIngredient === "string") {
-      setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
+    if (typeof newIngredient === "string" && newIngredient.trim() !== "") {
+      setIngredients((prevIngredients) => [
+        ...prevIngredients,
+        newIngredient.trim(),
+      ]);
     }
 
     event.currentTarget.reset();
@@ -48,7 +51,7 @@ export default function Main() {
           name="ingredient"
         />
         <button className="font-sans rounded-md border-none bg-[#141413] text-[#fafaf8] w-[150px] text-sm font-medium px-4 py-2 flex items-center justify-center hover:cursor-pointer">
-          Add ingredient
+          + Add ingredient
         </button>
       </form>
 

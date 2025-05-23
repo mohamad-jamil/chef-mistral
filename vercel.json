@@ -1,7 +1,0 @@
-{
-  "overrides": {
-    "preview": {
-      "rootDirectory": "frontend"
-    }
-  }
-}

@@ -23,4 +23,15 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Django migrations (optional)
+*/migrations/*.pyc
+*/migrations/__pycache__/
+
+# Virtual environment
 venv/
